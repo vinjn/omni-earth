@@ -21,7 +21,7 @@
             string boundCamera = "/World/Camera"
         }
         dictionary omni_layer = {
-            string authoring_layer = "./NewYork.usda"
+            string authoring_layer = "./default.usda"
             dictionary muteness = {
             }
         }
@@ -87,7 +87,7 @@ def Xform "World"
         prepend apiSchemas = ["ShapingAPI"]
     )
     {
-        float intensity = 1000
+        float intensity = 700
         float shaping:cone:angle = 180
         float shaping:cone:softness
         float shaping:focus
@@ -114,7 +114,7 @@ def Xform "World"
         float fStop = 0
         float horizontalAperture = 20.955
         float horizontalApertureOffset = 0
-        custom vector3d omni:kit:centerOfInterest = (0, 0, -129241.47564305263)
+        custom vector3d omni:kit:centerOfInterest = (0, 0, -87982.57548284995)
         token projection = "perspective"
         uniform token purpose = "default"
         double shutter:close = 0
@@ -123,9 +123,9 @@ def Xform "World"
         float verticalAperture = 15.2908
         float verticalApertureOffset = 0
         token visibility = "inherited"
-        float3 xformOp:rotateYXZ = (-13.81732, -33.86373, -9.105126)
+        float3 xformOp:rotateYXZ = (-24.355421, -20.198486, -8.627111)
         float3 xformOp:scale = (1, 1, 1)
-        double3 xformOp:translate = (8936.177148473775, -21454.24945075156, -57000.21637850935)
+        double3 xformOp:translate = (75375.3560793282, -47742.71734631544, -64400.687280953905)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateYXZ", "xformOp:scale"]
     }
 }
@@ -149,17 +149,17 @@ def Xform "Cesium_Tileset" (
     prepend apiSchemas = ["CesiumTilesetSchemaAPI"]
 )
 {
-    float cesium:culledScreenSpaceError = 64
+    float cesium:culledScreenSpaceError = 70
     bool cesium:enableFogCulling = 1
     bool cesium:enableFrustumCulling = 1
     bool cesium:enforceCulledScreenSpaceError = 1
     bool cesium:forbidHoles = 0
     string cesium:ionAccessToken = ""
     int64 cesium:ionAssetId = 0
-    uint cesium:loadingDescendantLimit = 20
+    uint cesium:loadingDescendantLimit = 40
     uint64 cesium:maximumCachedBytes = 536870912
-    float cesium:maximumScreenSpaceError = 16
-    uint cesium:maximumSimultaneousTileLoads = 20
+    float cesium:maximumScreenSpaceError = 32
+    uint cesium:maximumSimultaneousTileLoads = 40
     bool cesium:preloadAncestors = 1
     bool cesium:preloadSiblings = 1
     bool cesium:showCreditsOnScreen = 1
