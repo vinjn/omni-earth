@@ -1,0 +1,65 @@
+[package]
+version = "0.7.0"
+category = "simulation"
+feature = false
+app = false
+title = "Cesium for Omniverse"
+description = "High-accuracy full-scale WGS84 globe for Omniverse"
+authors = "Cesium GS Inc."
+repository = "https://github.com/CesiumGS/cesium-omniverse"
+keywords = [
+    "cesium",
+    "omniverse",
+    "geospatial",
+    "3D Tiles",
+    "glTF",
+    "globe",
+    "earth",
+    "simulation",
+]
+
+# Paths are relative to the extension folder
+changelog = "doc/CHANGES.md"
+readme = "doc/README.md"
+preview_image = "doc/resources/preview.jpg"
+icon = "doc/resources/icon.png"
+
+# Which extensions this extension depends on
+[dependencies]
+"cesium.usd.plugins" = {}
+"usdrt.scenegraph" = {}
+"omni.ui.scene" = {}
+"omni.usd.libs" = {}
+"omni.kit.pipapi" = {}
+"omni.kit.uiapp" = {}
+"omni.kit.viewport.utility" = {}
+"omni.kit.property.usd" = {}
+
+# Main python module this extension provides, it will be publicly available as "import cesium.omniverse"
+[[python.module]]
+name = "cesium.omniverse"
+
+[[native.plugin]]
+path = "bin/cesium.omniverse.plugin"
+
+[settings]
+exts."cesium.omniverse".defaultAccessToken = ""
+persistent.exts."cesium.omniverse".userAccessToken = ""
+
+[[test]]
+args = [
+    "--/renderer/enabled=pxr",
+    "--/renderer/active=pxr",
+    "--/app/window/dpiScaleOverride=1.0",
+    "--/app/window/scaleToMonitor=false",
+    "--/app/file/ignoreUnsavedOnExit=true",
+]
+dependencies = [
+    "omni.hydra.pxr",
+    "omni.kit.mainwindow",
+    "omni.kit.ui_test",
+    "omni.kit.test_suite.helpers",
+]
+pythonTests.include = ["cesium.omniverse.*"]
+pythonTests.exclude = []
+timeout = 180
