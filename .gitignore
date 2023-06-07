@@ -7,7 +7,7 @@ _*/
 **/.vscode/ipch
 
 # byte-compiled python files
-*.py[cod]
+*.py[co]
 
 /.vs
 
