@@ -18,7 +18,7 @@
     --/rtx/hydra/minFreeSystemMemory=1000 ^
     --/rtx/hydra/minFreeDeviceMemory=100 ^
     --/app/create/forceViewportSettings=true ^
+    --exec "open_stage.py %~dp0\scene\default.usda" ^
     %*
 
-    @REM --exec "open_stage.py scene\default.usda" ^
     @REM --/app/omnihydra/parallelHydraSprimSync=false ^
