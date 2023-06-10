@@ -1,4 +1,4 @@
-%~dp0\app\omni.create.bat ^
+%~dp0\app\kit\omni.app.full.bat ^
     --ext-folder %~dp0\exts ^
     --ext-folder %~dp0\app\exts ^
     --ext-folder %~dp0\app\extscache ^
@@ -9,8 +9,11 @@
     --enable cesium.usd.plugins ^
     --enable cesium.omniverse ^
     --/log/file=%~dp0\kit.log ^
+    --/exts/omni.kit.registry.nucleus/registries/0/name="kit/public" ^
+    --/exts/omni.kit.registry.nucleus/registries/0/url="https://d1aiacozzchaiq.cloudfront.net/exts/kit/public/104.0/" ^
+    --/exts/omni.kit.registry.nucleus/registries/1/name="kit/internal" ^
+    --/exts/omni.kit.registry.nucleus/registries/1/url="https://dw290v42wisod.cloudfront.net/exts/kit/community" ^
     --/app/window/showStartup=false ^
-    --/app/fastShutdown=true ^
     --/app/content/emptyStageOnStart=true ^
     --/app/useFabricSceneDelegate=true ^
     --/app/usdrt/scene_delegate/enableProxyCubes=false ^
